@@ -139,8 +139,8 @@ export default function Reminders() {
                         <tr key={r.id} className="border-b last:border-0 hover:bg-muted/20 transition-colors">
                           <td className="px-6 py-4 font-medium flex items-center gap-2">
                             {r.vendorName}
-                            {isUrgent && <AlertCircle className="h-4 w-4 text-orange-500" title="Action required soon" />}
-                            {isOverdue && <AlertCircle className="h-4 w-4 text-destructive" title="Action overdue" />}
+                            {isUrgent && <AlertCircle className="h-4 w-4 text-orange-500" aria-label="Action required soon" />}
+                            {isOverdue && <AlertCircle className="h-4 w-4 text-destructive" aria-label="Action overdue" />}
                           </td>
                           <td className="px-6 py-4">{new Date(r.renewalDate).toLocaleDateString()}</td>
                           <td className="px-6 py-4">{r.cancellationNoticeDays} days</td>
